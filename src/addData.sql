@@ -48,3 +48,9 @@ insert into Subject( name, credit, status) VALUES ('RDBMS', 10, 1);
 insert into Mark(id_subject, id_student, mark, examtime) values (1, 1, 8, 1);
 insert into Mark(id_subject, id_student, mark, examtime) values (1, 2, 10, 2);
 insert into Mark(id_subject, id_student, mark, examtime) values (2, 1, 12, 1);
+
+select * from Student;
+select * from Student where status = 1;
+select * from Subject where credit <10;
+select * from Student s join Class c on s.id_class = c.id where c.name = 'A1';
+select * from Student stu join Mark m on stu.id = m.id_student join Subject sub on m.id_subject = sub.id where sub.name = 'CF';
