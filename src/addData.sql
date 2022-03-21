@@ -54,3 +54,13 @@ select * from Student where status = 1;
 select * from Subject where credit <10;
 select * from Student s join Class c on s.id_class = c.id where c.name = 'A1';
 select * from Student stu join Mark m on stu.id = m.id_student join Subject sub on m.id_subject = sub.id where sub.name = 'CF';
+
+select * from Student where name like 'h%';
+# select * from Class where startdate between '2018-12-01 00:00:00' and '2018-12-31 23:59:59';
+select * from Class where month(startdate)=12;
+select * from Subject where credit between 3 and 5;
+
+update Student
+set name = 'Duong Dep Trai' where id = 1;
+
+select stu.name, sub.name, m.mark from Student stu join Mark m on stu.id = m.id_student join Subject sub on m.id_subject = sub.id ORDER BY m.mark DESC ;
